@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Search</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/20997fb678.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <style>
+        .cloud {
+            font-size: 30px;
+            color: #008080;
+        }
+
+        .days {
+            font-weight: lighter;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1"></h1>
+    <div class="container">
+        <form>
+            <div class="form-row my-4">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Search City" id="search-input"/>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-info" id="search-btn">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="my-5 text-center">
+            <h1 id="city"></h1>
+            <h6 id="date">Thursday 5:30</h6>
+            <h1 id="temperature"></h1>
+            <p>
+                <a href="#" id="celsius">ºC</a> |
+                <a href="#" id="fahrenheit">ºF</a>
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="px-2">
+                <p class="days">Sun</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Mon</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Tue</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Wed</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Thur</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Fri</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+            <div class="px-2">
+                <p class="days">Sat</p>
+                <i class="fa-solid fa-cloud-sun cloud px-2"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
